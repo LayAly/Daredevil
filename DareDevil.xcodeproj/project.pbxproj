@@ -14,7 +14,7 @@
 		2593411C1E82CC3E00A09F1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2593411A1E82CC3E00A09F1F /* LaunchScreen.storyboard */; };
 		259341271E82CC3E00A09F1F /* DareDevilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259341261E82CC3E00A09F1F /* DareDevilTests.swift */; };
 		259341321E82CC3E00A09F1F /* DareDevilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259341311E82CC3E00A09F1F /* DareDevilUITests.swift */; };
-		259341441E82CEFD00A09F1F /* Devil-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 259341431E82CEFD00A09F1F /* Devil-1.png */; };
+		25977F6C1E853BB7009203D1 /* 17495860_1340665912667553_1468023921_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 25977F6B1E853BB7009203D1 /* 17495860_1340665912667553_1468023921_n.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		2593412D1E82CC3E00A09F1F /* DareDevilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DareDevilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		259341311E82CC3E00A09F1F /* DareDevilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DareDevilUITests.swift; sourceTree = "<group>"; };
 		259341331E82CC3E00A09F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		259341431E82CEFD00A09F1F /* Devil-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Devil-1.png"; sourceTree = "<group>"; };
+		25977F6B1E853BB7009203D1 /* 17495860_1340665912667553_1468023921_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 17495860_1340665912667553_1468023921_n.png; path = DareDevilUITests/17495860_1340665912667553_1468023921_n.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 				259341181E82CC3E00A09F1F /* Assets.xcassets */,
 				2593411A1E82CC3E00A09F1F /* LaunchScreen.storyboard */,
 				2593411D1E82CC3E00A09F1F /* Info.plist */,
-				259341431E82CEFD00A09F1F /* Devil-1.png */,
+				25977F6B1E853BB7009203D1 /* 17495860_1340665912667553_1468023921_n.png */,
 			);
 			path = DareDevil;
 			sourceTree = "<group>";
@@ -235,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				259341441E82CEFD00A09F1F /* Devil-1.png in Resources */,
 				2593411C1E82CC3E00A09F1F /* LaunchScreen.storyboard in Resources */,
 				259341191E82CC3E00A09F1F /* Assets.xcassets in Resources */,
 				259341171E82CC3E00A09F1F /* Main.storyboard in Resources */,
@@ -253,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25977F6C1E853BB7009203D1 /* 17495860_1340665912667553_1468023921_n.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +507,7 @@
 				259341381E82CC3E00A09F1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		259341391E82CC3E00A09F1F /* Build configuration list for PBXNativeTarget "DareDevilTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +516,7 @@
 				2593413B1E82CC3E00A09F1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2593413C1E82CC3E00A09F1F /* Build configuration list for PBXNativeTarget "DareDevilUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +525,7 @@
 				2593413E1E82CC3E00A09F1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
