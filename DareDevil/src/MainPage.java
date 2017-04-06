@@ -17,12 +17,13 @@ public class MainPage extends PApplet
 
     int state;
 
-
+    Instructions instructions;
 
 
     public void setup()
     {
         textSize(30);
+        instructions = new Instructions(/*this*/);
 
     }
 
@@ -95,6 +96,60 @@ public class MainPage extends PApplet
         image(img1, 40, 520, 160, 160);
         image(img2, 820, 520, 160, 160);
 
+        if(drawInstruct == true)
+        {
+            textFont(font2, 30);
+            instructions.draw();
+
+            textFont(font, 30);
+            // Title
+            textSize(55);
+            fill(88, 88,88);
+            stroke(88, 88, 88);
+            text("How to play", 350, 250);
+            image(img1, 240, 490, 160, 160);
+
+            if (mouseX > 130 && mouseX < 130+boxWidth &&
+                    mouseY > 120 && mouseY < 120+boxHeight)
+            {
+                overBox = true;
+                if(!locked)
+                {
+                    strokeWeight(5);
+                    stroke( 255);
+                    noFill();
+                    rect(130, 120, 100, 60, 5);
+
+                }
+            }
+            else
+            {
+                overBox3 = false;
+                strokeWeight(2);
+                stroke( 255);
+                noFill();
+                rect(130, 120, 100, 60, 5);
+            }
+
+        }
+
+        if(goBack == true)
+        {
+            state=0;
+        }
+
+    }
+
+    public void mousePressed()
+    {
+        if(overBox1)
+        {
+            drawInstruct =  true;
+        }
+        if(overBox3)
+        {
+            goBack =  true;
+        }
     }
 
     public static void main(String[] args) {
