@@ -8,10 +8,22 @@ import processing.core.PImage;
 
 public class MainPage extends PApplet
 {
+    boolean overBox = false;
+    boolean overBox1 = false;
+    boolean overBox3 = false;
+    boolean locked = false;
+    boolean drawInstruct = false;
+    boolean goBack = false;
+
+    int state;
+
+
+
 
     public void setup()
     {
         textSize(30);
+
     }
 
     public void settings()
@@ -28,9 +40,6 @@ public class MainPage extends PApplet
         float boxWidth = 300;
         float boxHeight = 60;
 
-        boolean overBox = false;
-        boolean overBox1 = false;
-        boolean locked = false;
 
         background(251, 243, 242);
         textFont(font, 100);
