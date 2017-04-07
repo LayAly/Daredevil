@@ -29,6 +29,7 @@ public class MainPage extends PApplet
 
     public void settings()
     {
+
         size(1000, 800);
     }
 
