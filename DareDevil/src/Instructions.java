@@ -2,11 +2,8 @@
  * Created by yasminanunez on 04/04/2017.
  */
 
-import processing.core.PApplet;
-import processing.core.PFont;
-import processing.core.PImage;
 
-public class Instructions extends PApplet
+public class Instructions
 {
     public void draw()
     {
@@ -36,7 +33,7 @@ public class Instructions
         proc.strokeWeight(15);
         proc.stroke(265, 222, 224);
         proc.fill(251, 243, 242);
-        proc.rect(100, 100, 800, 600, 7);
+        proc.rect(80, 80, 800, 600, 7);
 
         // Text
         proc.textSize(20);
@@ -47,6 +44,10 @@ public class Instructions
         proc.textSize(20);
         proc.text("This is you", 270, 450);
         proc.text("Avoid these", 625, 450);
+
+        // Back Button
+        proc.strokeWeight(5);
+        proc.stroke(255);
 
         proc.textSize(25);
         proc.fill( 88, 88, 88);
