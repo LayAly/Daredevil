@@ -6,7 +6,7 @@ import ddf.minim.*;
 Instructions instructions;
 Main main;
 NewGame game;
-Pillars p;
+
 
 //Buttons
 boolean overBox = false;
@@ -31,8 +31,7 @@ void setup()
   instructions = new Instructions();
   main = new Main();
   game = new NewGame();
-  
-  pillars[] p = new Pillars[4];
+ 
   for(int i =0; i<4; i++)
   {
     p[i] = new pillars(i);
