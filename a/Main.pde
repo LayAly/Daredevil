@@ -87,7 +87,7 @@ void button()
        if(overBox)
         {
           locked = true;
-          game.setupGame();
+         game.setupGame();
           overBox = false;
           state = 2;
           locked = false;

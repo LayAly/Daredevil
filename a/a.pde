@@ -32,10 +32,10 @@ void setup()
   main = new Main();
   game = new NewGame();
  
-  for(int i =0; i<4; i++)
+ /* for(int i =0; i<4; i++)
   {
     p[i] = new pillars(i);
-  }
+  }*/
 
 }
 

@@ -11,13 +11,13 @@ class NewGame
     rect(10, 470, 90, 10, 5);
     noStroke();
   
-   for(int i = 0;i<3;i++)
+  /* for(int i = 0;i<3;i++)
       {
         p[i].setupPillars();
         p[i].checkPosition();
-      }
+      }*/
       
-    
+    setupPillars();
     drawImage();
   }
   
@@ -60,7 +60,7 @@ class NewGame
     triangle(430, 550, 450, 450, 470, 550);
   }
   
-  void checkPosition()
+ /* void checkPosition()
   {
     if(xPos < 0)
     {
@@ -73,7 +73,7 @@ class NewGame
       crashed =true;
       score ++;
     }
-  }
+  }*/
   void drawImage()
   {
     PImage img1 = loadImage("Devil.png");
