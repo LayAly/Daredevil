@@ -1,6 +1,7 @@
 class Player {
   PVector pos;
   int score;
+  PImage img1;
 
   Player() {
     score = 0;
@@ -9,17 +10,20 @@ class Player {
 
  void draw() {
     drawDevil();
-
-    if (keyPressed) {
-      if (key == ' ') pos.y-=7;
+    img1 = loadImage("Devil.png");
+    
+    for(int i = 0; i < in.bufferSize()-1; i++)
+    {
+      pos.y += 50 + in.left.get(i+1)*50;
+      pos.x += 50 + in.left.get(i)*50;
     }
-    pos.y += 4;
-    pos.x += 2;
+   
+    image(img1, pos.x, pos.y);
+    
   }
 
   void drawDevil() {
     
-    PImage img1 = loadImage("Devil.png");
     image(img1, pos.x, pos.y, 80, 80);
   }
 }

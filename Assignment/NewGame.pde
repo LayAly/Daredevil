@@ -25,17 +25,27 @@ class NewGame
   
   void drawPipes() 
   {
-    for (int i = 0; i < NUMPIPES; i++) {
+    for (int i = 0; i < NUMPIPES; i++) 
+    {
       if (PVector.dist(p.pos, ps[i].pos) < 650)
+      {
         ps[i].draw();
+      }
+      
       if (p.pos.x > ps[i].pos.x && p.pos.x < ps[i].pos.x + ps[i].bWidth && p.pos.y > ps[i].pos.y && p.pos.y < ps[i].pos.y + ps[i].bHeight)
       {
         if (!ps[i].scored)
+        {
           p.score++;
+        }
         ps[i].scored = true;
       }
-      if (p.pos.x > ps[i].pos.x && p.pos.x < ps[i].pos.x + ps[i].bWidth && (p.pos.y < ps[i].pos.y || p.pos.y > ps[i].pos.y + ps[i].bHeight))
+      
+      if (p.pos.x > ps[i].pos.x && p.pos.x < ps[i].pos.x + ps[i].bWidth && 
+          (p.pos.y < ps[i].pos.y || p.pos.y > ps[i].pos.y + ps[i].bHeight))
+       {
         state = 0;
+       }
     }
   }  
 }
