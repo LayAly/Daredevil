@@ -53,7 +53,7 @@ class Instructions
         textSize(25);
         fill(0);
         stroke(0);
-        text("Back", 150, 160);
+        text("Back", 155, 160);
      
        
 

@@ -1,14 +1,16 @@
-
 class GameOver
 {
+  
+  boolean initiated = false;
 
   void setupOver()
   {
+    state = 3;
     background(251, 243, 242);
-    font = createFont("Christmas Time Personal Use", 55);
-    f = createFont("flicker DEMO", 20);
+    font = createFont("font.ttf", 55);
+    f = createFont("font2.otf", 20);
 
-    drawOver();
+    //drawOver();
   }
 
   PFont font;
@@ -16,7 +18,7 @@ class GameOver
 
   void drawOver()
   {
-
+    if(!initiated) {setupOver(); initiated = false;}
     background(251, 243, 242);
 
     // Outline
@@ -30,7 +32,7 @@ class GameOver
     textFont(font);
     fill(0);
     stroke(0);
-    text("Game Over!", 400, 200);
+    text("Game Over!", 380, 200);
 
     // Text
     textSize(20);
@@ -38,13 +40,13 @@ class GameOver
     stroke(0);
     textSize(20);
     textFont(f);
-    text("High Score", 270, 300);
+    text("High Score", 260, 300);
     text("Your Score", 625, 300);
     
     // displays scores...
     textSize(35);
     text(highScore, 290, 350);
-    text(score, 655, 350);
+    text(p.score, 655, 350);
     
 
     button();
@@ -53,7 +55,7 @@ class GameOver
     strokeWeight(1);
     stroke(0);
     fill(265, 222, 224);
-    rect(320, 460, 110, 60, 5);
+    rect(240, 460, 110, 60, 5);
 
 
 
@@ -61,19 +63,20 @@ class GameOver
     textSize(15);
     fill(0);
     stroke(0);
-    text("Main menu", 340, 495);
+    text("Main menu", 260, 495);
 
     // Replay button
     strokeWeight(1);
     stroke(0);
     fill(265, 222, 224);
-    rect(580, 460, 110, 60, 5);
+    rect(620, 460, 110, 60, 5);
 
     textFont(f);
     textSize(15);
     fill(0);
     stroke(0);
-    text("Play again?", 600, 495);
+    text("Play again?", 640, 495);
+
   }
 
   void button()
@@ -82,7 +85,7 @@ class GameOver
     float boxWidth = 110;
     float boxHeight = 60;
 
-    if (mouseX > 320 && mouseX < 320+boxWidth && mouseY > 460 && mouseY < 460+boxHeight)
+    if (mouseX > 240 && mouseX < 240+boxWidth && mouseY > 460 && mouseY < 460+boxHeight)
     {
       overBox4 = true;
 
@@ -90,7 +93,7 @@ class GameOver
       {
         strokeWeight(2);
         stroke(0);
-        rect(320, 460, 110, 60, 5);
+        rect(240, 460, 110, 60, 5);
       }
     }
     else 
@@ -99,7 +102,7 @@ class GameOver
       strokeWeight(1);
     }
 
-    if (mouseX > 580 && mouseX < 580+boxWidth && mouseY > 460 && mouseY < 460+boxHeight)
+    if (mouseX > 620 && mouseX < 620+boxWidth && mouseY > 460 && mouseY < 460+boxHeight)
     {
       overBox5 = true;
 
@@ -107,25 +110,24 @@ class GameOver
       {
         strokeWeight(3);
         stroke(0);
-        rect(580, 460, 110, 60, 5);
+        rect(620, 460, 110, 60, 5);
       }
     } 
     else
     {
       overBox5 = false;
-      strokeWeight(3);
+      strokeWeight(1);
     }
   }
 
 
   void mousePressed()
   {
-
     if (overBox4)
     {
       locked = true;
       main.drawMain();
-      overBox = false;
+      overBox4 = false;
       state = 0;
       locked = false;
     }  

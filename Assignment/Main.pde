@@ -101,9 +101,6 @@ void button()
           overBox2 = false;
           state = 1;
           locked = false;
-        }
-       
-      
+        }    
     }
-
 }
