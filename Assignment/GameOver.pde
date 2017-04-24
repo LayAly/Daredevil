@@ -5,16 +5,10 @@ class GameOver
 
   void setupOver()
   {
-    state = 3;
     background(251, 243, 242);
-    font = createFont("font.ttf", 55);
-    f = createFont("font2.otf", 20);
 
     //drawOver();
   }
-
-  PFont font;
-  PFont f;
 
   void drawOver()
   {
@@ -28,24 +22,24 @@ class GameOver
     rect(90, 90, 800, 500, 7);
 
     //Game over
-    textSize(55);
     textFont(font);
     fill(0);
     stroke(0);
+    textSize(55);
     text("Game Over!", 380, 200);
 
     // Text
     textSize(20);
     fill(0);
     stroke(0);
+    textFont(font2);
     textSize(20);
-    textFont(f);
     text("High Score", 260, 300);
     text("Your Score", 625, 300);
     
     // displays scores...
     textSize(35);
-    text(highScore, 290, 350);
+    text(p.highScore, 290, 350);
     text(p.score, 655, 350);
     
 
@@ -59,7 +53,7 @@ class GameOver
 
 
 
-    textFont(f);
+    textFont(font2);
     textSize(15);
     fill(0);
     stroke(0);
@@ -71,12 +65,11 @@ class GameOver
     fill(265, 222, 224);
     rect(620, 460, 110, 60, 5);
 
-    textFont(f);
+    textFont(font2);
     textSize(15);
     fill(0);
     stroke(0);
     text("Play again?", 640, 495);
-
   }
 
   void button()
@@ -126,19 +119,27 @@ class GameOver
     if (overBox4)
     {
       locked = true;
-      main.drawMain();
-      overBox4 = false;
-      state = 0;
+      drawMain = true;
+      overBox = false;
       locked = false;
+      state = 0;
+      drawOver = false;
+      //locked = false;
+      //playAgain = true;
     }  
 
     if (overBox5)
     {
       locked = true;
-      game.setupGame();
+      drawPlay = true;
       overBox5 = false;
-      state = 2;
       locked = false;
+      state = 2;
+      drawOver = false;
+      //playAgain = true;
+      p.score = reset;
+      //playAgain = false;
+      //locked = false;
     }
   }
 }
