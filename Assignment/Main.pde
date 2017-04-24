@@ -5,8 +5,6 @@ class Main
         state = 0;
         background(251, 243, 242);
         textSize(30);
-        PFont font = createFont("font.ttf", 32);
-        PFont font2 = createFont("font2.otf", 32);
         
         textFont(font, 100);
         fill(0);
@@ -18,7 +16,8 @@ class Main
         
         button();
         fill(0);
-        textFont(font2, 30);
+        textFont(font2);
+        textSize(30);
         text("Play" , 475, 340);
         text("Instructions" , 420, 490);
         drawImage();
@@ -88,19 +87,22 @@ void button()
        if(overBox)
         {
           locked = true;
-         game.setupGame();
+          drawPlay = true;
           overBox = false;
           state = 2;
           locked = false;
+          drawMain = false;
+          p.score = reset;
         }  
         
       if(overBox2)
         {
           locked = true;
-          instructions.setupInstruct();
+          drawInstructions = true;
           overBox2 = false;
           state = 1;
           locked = false;
+          drawMain = false;
         }    
     }
 }
