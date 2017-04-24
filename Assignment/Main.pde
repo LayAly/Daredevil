@@ -2,7 +2,6 @@ class Main
 {
   void drawMain()
     {
-        state = 0;
         background(251, 243, 242);
         textSize(30);
         
@@ -36,40 +35,39 @@ class Main
       
     }
 
-void button()
-{
-   float boxWidth = 300;
-   float boxHeight = 60;
+  void button()
+  {
+     float boxWidth = 300;
+     float boxHeight = 60;
         
         if (mouseX > 350 && mouseX < 350+boxWidth &&
                 mouseY > 300 && mouseY < 300+boxHeight)
         {
+           //Play Button
             overBox = true;
             if(!locked)
             {
                 strokeWeight(2);
                 stroke(0);
                 rect(350, 300, 300, 60, 5);
-
             }
         }
         else
         {
           overBox = false;
           strokeWeight(1);
-          
         }
 
         if (mouseX > 350 && mouseX < 350+boxWidth &&
                 mouseY > 450 && mouseY < 450+boxHeight)
         {
+           //Instructions
             overBox2 = true;
             if(!locked)
             {
                 strokeWeight(2);
                 stroke(0);
                 rect(350, 450, 300, 60, 5);
-
             }
         }
         else
@@ -83,13 +81,12 @@ void button()
     }
 
  void mousePressed()
-    {
+ {
        if(overBox)
         {
           locked = true;
           drawPlay = true;
           overBox = false;
-          state = 2;
           locked = false;
           drawMain = false;
           p.score = reset;
@@ -100,9 +97,8 @@ void button()
           locked = true;
           drawInstructions = true;
           overBox2 = false;
-          state = 1;
           locked = false;
           drawMain = false;
         }    
-    }
+  }
 }

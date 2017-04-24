@@ -1,12 +1,10 @@
 class GameOver
 {
-  
   boolean initiated = false;
 
   void setupOver()
   {
     background(251, 243, 242);
-
     //drawOver();
   }
 
@@ -50,9 +48,8 @@ class GameOver
     stroke(0);
     fill(265, 222, 224);
     rect(240, 460, 110, 60, 5);
-
-
-
+    
+    //Main Menu
     textFont(font2);
     textSize(15);
     fill(0);
@@ -80,6 +77,7 @@ class GameOver
 
     if (mouseX > 240 && mouseX < 240+boxWidth && mouseY > 460 && mouseY < 460+boxHeight)
     {
+      //Main Menu Button
       overBox4 = true;
 
       if (!locked)
@@ -97,6 +95,7 @@ class GameOver
 
     if (mouseX > 620 && mouseX < 620+boxWidth && mouseY > 460 && mouseY < 460+boxHeight)
     {
+      //Play Again Button
       overBox5 = true;
 
       if (!locked)
@@ -122,7 +121,6 @@ class GameOver
       drawMain = true;
       overBox = false;
       locked = false;
-      state = 0;
       drawOver = false;
       //locked = false;
       //playAgain = true;
@@ -134,7 +132,6 @@ class GameOver
       drawPlay = true;
       overBox5 = false;
       locked = false;
-      state = 2;
       drawOver = false;
       //playAgain = true;
       p.score = reset;

@@ -1,14 +1,10 @@
 class Instructions 
 {
-
   void setupInstruct()
   {
-    state = 1;
     background(251, 243, 242);
-
     img = loadImage("Devil.png");
-
-
+    
     drawInstruct();
   }
 
@@ -45,13 +41,12 @@ class Instructions
     //Added - Changed position
     image(img, 250, 480, 130, 130);
 
+    //Back Button
     textFont(font2);
     textSize(25);
     fill(0);
     stroke(0);
     text("Back", 155, 160);
-
-
 
     // Obstacle drawing
     fill(255, 202, 204);
@@ -59,7 +54,8 @@ class Instructions
 
     rect(630, 530, 90, 10, 8);
     rect(640, 540, 70, 100);
-
+    
+    //Pipe EG
     fill(247, 250, 126);
     triangle( 640, 530, 660, 530, 650, 480);
     triangle(690, 530, 710, 530, 700, 480);
@@ -78,6 +74,7 @@ class Instructions
     if (mouseX > 130 && mouseX < 130+100 &&
       mouseY > 120 && mouseY < 120+60)
     {
+      //Back Button
       overBox3 = true;
       if (!locked)
       {
@@ -103,7 +100,6 @@ class Instructions
       locked = true;
       drawMain = true;
       overBox3 = false;
-      state = 0;
       locked = false;
       drawInstructions = false;
     }

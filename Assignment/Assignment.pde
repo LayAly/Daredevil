@@ -42,7 +42,6 @@ Boolean playing = true;
 Boolean playAgain = false;
 boolean fall = false;
 
-int state = 0;
 
 PFont font;
 PFont font2;

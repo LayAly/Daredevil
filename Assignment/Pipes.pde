@@ -17,7 +17,8 @@ class PipeSet
     drawPipes();
   }
 
-  void drawPipes() {
+  void drawPipes() 
+  {
 
     fill(247, 250, 126);
     //Top Spikes
