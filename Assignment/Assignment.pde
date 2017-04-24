@@ -16,8 +16,12 @@ PipeSet[] ps;
 Camera c;
 
 //Variable for pipes
-static final int NUMPIPES = 1000;
+static final int NUMPIPES = 20;
 int numPipes;
+
+PVector pos; //Camera's position 
+int reset = 0;
+int reset1 = 100;
 
 //Buttons
 boolean overBox = false;
@@ -25,20 +29,31 @@ boolean overBox2 = false;
 boolean overBox3 = false;
 boolean overBox4 = false;
 boolean overBox5 = false;
-
+//////////////////////////////////////
+Boolean drawMain = true;
+Boolean drawPlay = false;
+Boolean drawInstructions = false;
+Boolean drawOver = false;
+//////////////////////////////////////
 boolean locked = false;
 boolean goBack = false;
 //Added new boolean for music
 Boolean playing = true;
-
+Boolean playAgain = false;
 boolean fall = false;
 
 int state = 0;
-int highScore = 0;
 
+PFont font;
+PFont font2;
+  
 void setup()
 {
   size(1000,800, P2D);
+  
+  font = createFont("font.ttf", 100);
+  font2 = createFont("font2.otf", 30);
+    
   instructions = new Instructions();
   main = new Main();
   game = new NewGame();
@@ -65,20 +80,17 @@ void setup()
 
  void draw()
 {
-  switch(state)
+  if(drawMain)
   {
-    case 0:
     main.drawMain();
     //Added for playing
     player.play(); 
     playing = true;
-    break;
-    
-    case 1:
-    instructions.setupInstruct();
-    break;
-    
-    case 2:
+  }
+  
+  if(drawPlay)
+  {
+    //background.drawBackground();
     game.setupGame();
     //Added for stop music
     player.pause();
@@ -92,15 +104,28 @@ void setup()
     translate(c.pos.x, c.pos.y);
     //if (p.pos.y  > height - 120)  state = 0;
     fill(0);
+    textSize(30);
     text("Score : ",20,40);
     text(p.score,120,40);
-    break; 
-    
-    case 3:
+  }
+  
+  if(drawInstructions)
+  {
+    instructions.setupInstruct();
+  }
+  
+  if(drawOver)
+  {
     over.drawOver();
     player.play(); 
     playing = true;
-  }    
+    c.pos = new PVector(reset, reset);
+    p.pos = new PVector(reset1, reset1);
+    //playAgain = true;
+   // p.score = reset;
+  }
+  
+
 }
 
 
