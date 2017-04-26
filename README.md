@@ -22,4 +22,4 @@ Also since the game is controlled by sound, at the Main Menu and Game Over pages
 
 That is all for our game!
 
-The YouTube video link for our demo of the game is : 
+The YouTube video link for our demo of the game is : https://www.youtube.com/watch?v=12dfPSlkoUA
